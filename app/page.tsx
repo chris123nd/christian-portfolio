@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Linkedin, Mail, Phone, MapPin, Award, Users, Trophy, Github, Calendar } from "lucide-react";
+import { Linkedin, Mail, Phone, MapPin, Award, Users, Trophy, Github, Calendar, Briefcase } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -17,7 +17,7 @@ export default function Portfolio() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ["hero", "about", "skills", "leadership", "certifications", "projects", "contact"];
+      const sections = ["hero", "about", "experience", "skills", "leadership", "certifications", "projects", "contact"];
       const scrollPosition = window.scrollY + 100;
 
       for (const section of sections) {
@@ -240,6 +240,31 @@ export default function Portfolio() {
     },
   ];
 
+  const workExperience = [
+    {
+      company: "PT Wide Technologies",
+      position: "Intern",
+      period: "Professional Internship",
+      description: "Gained practical experience contributing to software development work in a professional technology environment.",
+      responsibilities: [
+        "Supported the development and improvement of software features",
+        "Collaborated with team members throughout the development process",
+        "Applied software engineering and problem-solving skills to real projects",
+      ],
+    },
+    {
+      company: "Dicoding",
+      position: "Intern",
+      period: "Professional Internship",
+      description: "Developed technical skills through structured learning, hands-on assignments, and software development practice.",
+      responsibilities: [
+        "Completed software development learning paths and practical projects",
+        "Strengthened programming, version control, and development workflow skills",
+        "Applied best practices through independent and collaborative learning",
+      ],
+    },
+  ];
+
   const certifications = [
     {
       title: "Programming Logic 101",
@@ -317,7 +342,7 @@ export default function Portfolio() {
             </motion.div>
             <div className="flex items-center space-x-8">
               <div className="hidden md:flex space-x-8">
-                {["About", "Skills", "Leadership", "Certifications", "Projects", "Contact"].map((item) => (
+                {["About", "Experience", "Skills", "Leadership", "Certifications", "Projects", "Contact"].map((item) => (
                   <button
                     key={item}
                     onClick={() => scrollToSection(item.toLowerCase())}
@@ -543,6 +568,47 @@ export default function Portfolio() {
                 </CardContent>
               </Card>
             </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Work Experience Section */}
+      <section id="experience" className={`py-20 ${isDarkMode ? "bg-gray-800" : "bg-gray-50"}`}>
+        <div className="max-w-6xl mx-auto px-6">
+          <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }} className="text-center mb-16">
+            <h2 className={`text-3xl lg:text-4xl font-bold mb-4 ${isDarkMode ? "text-white" : "text-gray-900"}`}>Work Experience</h2>
+            <div className="w-20 h-1 bg-blue-600 mx-auto mb-8" />
+            <p className={`${isDarkMode ? "text-gray-300" : "text-gray-600"} text-lg max-w-2xl mx-auto`}>Professional internship experiences where I applied my technical skills in real-world environments.</p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            {workExperience.map((item, index) => (
+              <motion.div key={item.company} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: index * 0.1 }} viewport={{ once: true }}>
+                <Card className={`${isDarkMode ? "bg-gray-900 border-gray-700" : "bg-white border-gray-200"} h-full hover:shadow-lg transition-shadow duration-300`}>
+                  <CardHeader>
+                    <div className="flex items-start gap-4">
+                      <div className="bg-blue-100 dark:bg-blue-900 p-3 rounded-lg text-blue-600"><Briefcase className="w-6 h-6" /></div>
+                      <div className="flex-1">
+                        <CardTitle className={`${isDarkMode ? "text-white" : "text-gray-900"} text-xl`}>{item.company}</CardTitle>
+                        <CardDescription className="text-blue-600 text-lg font-medium">{item.position}</CardDescription>
+                        <div className="flex items-center gap-2 mt-2">
+                          <Calendar className="text-gray-500 w-4 h-4" />
+                          <span className={`${isDarkMode ? "text-gray-400" : "text-gray-500"} text-sm`}>{item.period}</span>
+                        </div>
+                      </div>
+                    </div>
+                  </CardHeader>
+                  <CardContent>
+                    <p className={`${isDarkMode ? "text-gray-300" : "text-gray-600"} mb-4`}>{item.description}</p>
+                    <ul className={`${isDarkMode ? "text-gray-300" : "text-gray-600"} flex flex-col gap-2`}>
+                      {item.responsibilities.map((responsibility) => (
+                        <li key={responsibility} className="flex items-start gap-2"><span className="text-blue-600">•</span>{responsibility}</li>
+                      ))}
+                    </ul>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
