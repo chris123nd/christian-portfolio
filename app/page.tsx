@@ -131,7 +131,7 @@ export default function Portfolio() {
     },
     {
       name: "Excel",
-      logo: "https://cdn.simpleicons.org/microsoftexcel/217346",
+      logo: "https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/microsoftexcel.svg",
       category: "Database",
     },
     {
