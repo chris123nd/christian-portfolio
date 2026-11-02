@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Linkedin, Mail, Phone, MapPin, Award, Users, Trophy, Github, Calendar } from "lucide-react";
+import { Linkedin, Mail, Phone, MapPin, Award, Users, Trophy, Github, Calendar, Briefcase } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -17,7 +17,7 @@ export default function Portfolio() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ["hero", "about", "skills", "leadership", "certifications", "projects", "contact"];
+      const sections = ["hero", "about", "experience", "skills", "leadership", "certifications", "projects", "contact"];
       const scrollPosition = window.scrollY + 100;
 
       for (const section of sections) {
@@ -75,6 +75,11 @@ export default function Portfolio() {
       category: "Frontend",
     },
     {
+      name: "Next.js",
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
+      category: "Frontend",
+    },
+    {
       name: "PHP",
       logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg",
       category: "Backend",
@@ -126,7 +131,7 @@ export default function Portfolio() {
     },
     {
       name: "Excel",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/3/34/Microsoft_Office_Excel_%282019%E2%80%93present%29.svg",
+      logo: "https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/microsoftexcel.svg",
       category: "Database",
     },
     {
@@ -141,9 +146,21 @@ export default function Portfolio() {
     },
   ];
 
-  const projects = [
-    {
-      title: "Mobile E-Commerce Application – Rumah Kreatif Toba",
+const projects = [
+  {
+  title: "Thesis: TAPATUPA Primary-Standby Database",
+  period: "Aug. 2025 – Aug. 2026",
+  description: "A high-availability PostgreSQL primary-standby cluster built for resilient Laravel application workloads.",
+  technologies: ["PostgreSQL", "Docker", "Laravel", "Redis", "HAProxy", "PgBouncer"],
+  features: [
+  "Built PostgreSQL primary-standby replication on Docker Compose using WAL streaming",
+  "Configured HAProxy to route writes to the primary and distribute reads across the standby",
+  "Improved throughput from 23.3 to 45.1 requests per second and restored service after failover in 17.86 seconds",
+  ],
+  githubUrl: "https://github.com/",
+  },
+  {
+  title: "Mobile E-Commerce Application – Rumah Kreatif Toba",
       period: "Jan 2025 - Jul 2025",
       description: "Developed a comprehensive mobile e-commerce application with user authentication, real-time chat, product catalog, and flexible checkout process.",
       technologies: ["Flutter", "Dart", "Laravel", "PHP", "MySQL"],
@@ -194,7 +211,7 @@ export default function Portfolio() {
     {
       organization: "Student Executive Board (BEM) - Del Institut of Technology",
       position: "Treasurer of Religious and Social Department",
-      period: "Nov 2024 - Present",
+      period: "2024-2025",
       description: "Managing department budgeting and organizing spiritual and social programs.",
       responsibilities: [
         "Organizing weekly student worship and reflections",
@@ -233,10 +250,35 @@ export default function Portfolio() {
     {
       organization: "Association of Software Engineering Technology Students (HIMAPRO) - Del Institut of Technology",
       position: "Member",
-      period: "Sep 2022 - Present",
+      period: "Sep 2022 - Sep 2026",
       description: "Active participation in Software Engineering Technology Student Association.",
       responsibilities: ["Participated in organizational activities and events", "Supported events through coordination and collaboration", "Contributed to student community development", "Engaged in professional development activities"],
       icon: <Users className="w-6 h-6" />,
+    },
+  ];
+
+  const workExperience = [
+    {
+      company: "PT Wide Technologies",
+      position: "Intern",
+      period: "Professional Internship",
+      description: "Gained practical experience contributing to software development work in a professional technology environment.",
+      responsibilities: [
+        "Supported the development and improvement of software features",
+        "Collaborated with team members throughout the development process",
+        "Applied software engineering and problem-solving skills to real projects",
+      ],
+    },
+    {
+      company: "Dicoding",
+      position: "Intern",
+      period: "Professional Internship",
+      description: "Developed technical skills through structured learning, hands-on assignments, and software development practice.",
+      responsibilities: [
+        "Completed software development learning paths and practical projects",
+        "Strengthened programming, version control, and development workflow skills",
+        "Applied best practices through independent and collaborative learning",
+      ],
     },
   ];
 
@@ -317,7 +359,7 @@ export default function Portfolio() {
             </motion.div>
             <div className="flex items-center space-x-8">
               <div className="hidden md:flex space-x-8">
-                {["About", "Skills", "Leadership", "Certifications", "Projects", "Contact"].map((item) => (
+                {["About", "Experience", "Skills", "Leadership", "Certifications", "Projects", "Contact"].map((item) => (
                   <button
                     key={item}
                     onClick={() => scrollToSection(item.toLowerCase())}
@@ -425,8 +467,8 @@ export default function Portfolio() {
                   className="w-64 h-64 rounded-full overflow-hidden border-4 border-white/50 dark:border-gray-700/50 shadow-2xl backdrop-blur-sm"
                 >
                   <img
-                    src="/profile.jpg"
-                    alt="Christian Yohanes Simangunsong"
+                    src="/profile.png"
+                    alt="Christian Simangunsong"
                     className="w-full h-full object-cover"
                     onError={(e) => {
                       e.currentTarget.src = "/placeholder.svg?height=256&width=256";
@@ -488,13 +530,13 @@ export default function Portfolio() {
             <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }}>
               <div className="space-y-6">
                 <p className={`text-lg leading-relaxed ${isDarkMode ? "text-gray-300" : "text-gray-600"}`}>
-                  Hi👋, I'm Christian, a 6th semester student of Software Engineering Technology Study Program at Del Institute of Technology. I have a strong interest in frontend and backend software development, as well as UI/UX design.
+                  Hi, I&apos;m Christian Yohanes Simangunsong, a Software Engineering Technology graduate from Institut Teknologi Del with a strong interest in full-stack development and UI/UX design.
                 </p>
                 <p className={`text-lg leading-relaxed ${isDarkMode ? "text-gray-300" : "text-gray-600"}`}>
-                  I have experience in developing websites and mobile applications, and designing user interfaces that meet project needs through various academic and organizational projects.
+                  I have hands-on experience developing web and mobile applications through academic projects, organizational activities, and professional experience. My technical interests include frontend and backend development, REST API integration, database management, and creating intuitive, user-centered interfaces.
                 </p>
                 <p className={`text-lg leading-relaxed ${isDarkMode ? "text-gray-300" : "text-gray-600"}`}>
-                  In the future, I would like to continue honing my skills in full-stack development and UI/UX to prepare myself for the professional world.
+                  I enjoy exploring new technologies, solving technical challenges, and building practical digital solutions. I am continuously improving my skills and looking forward to contributing to impactful software development projects while growing as a software developer.
                 </p>
               </div>
             </motion.div>
@@ -537,12 +579,53 @@ export default function Portfolio() {
                   <div>
                     <h4 className={`${isDarkMode ? "text-white" : "text-gray-900"} font-medium`}>Institut Teknologi Del</h4>
                     <p className="text-blue-600">Bachelor of Applied Software</p>
-                    <p className={`${isDarkMode ? "text-gray-400" : "text-gray-500"} text-sm`}>Aug 2022 - Sep 2026 (Expected)</p>
-                    <p className={`${isDarkMode ? "text-gray-400" : "text-gray-500"} text-sm`}>GPA: 3.08/4.00</p>
+                    <p className={`${isDarkMode ? "text-gray-400" : "text-gray-500"} text-sm`}>Aug 2022 - Sep 2026</p>
+                    <p className={`${isDarkMode ? "text-gray-400" : "text-gray-500"} text-sm`}>GPA: 3.18/4.00</p>
                   </div>
                 </CardContent>
               </Card>
             </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Work Experience Section */}
+      <section id="experience" className={`py-20 ${isDarkMode ? "bg-gray-800" : "bg-gray-50"}`}>
+        <div className="max-w-6xl mx-auto px-6">
+          <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }} className="text-center mb-16">
+            <h2 className={`text-3xl lg:text-4xl font-bold mb-4 ${isDarkMode ? "text-white" : "text-gray-900"}`}>Work Experience</h2>
+            <div className="w-20 h-1 bg-blue-600 mx-auto mb-8" />
+            <p className={`${isDarkMode ? "text-gray-300" : "text-gray-600"} text-lg max-w-2xl mx-auto`}>Professional internship experiences where I applied my technical skills in real-world environments.</p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            {workExperience.map((item, index) => (
+              <motion.div key={item.company} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: index * 0.1 }} viewport={{ once: true }}>
+                <Card className={`${isDarkMode ? "bg-gray-900 border-gray-700" : "bg-white border-gray-200"} h-full hover:shadow-lg transition-shadow duration-300`}>
+                  <CardHeader>
+                    <div className="flex items-start gap-4">
+                      <div className="bg-blue-100 dark:bg-blue-900 p-3 rounded-lg text-blue-600"><Briefcase className="w-6 h-6" /></div>
+                      <div className="flex-1">
+                        <CardTitle className={`${isDarkMode ? "text-white" : "text-gray-900"} text-xl`}>{item.company}</CardTitle>
+                        <CardDescription className="text-blue-600 text-lg font-medium">{item.position}</CardDescription>
+                        <div className="flex items-center gap-2 mt-2">
+                          <Calendar className="text-gray-500 w-4 h-4" />
+                          <span className={`${isDarkMode ? "text-gray-400" : "text-gray-500"} text-sm`}>{item.period}</span>
+                        </div>
+                      </div>
+                    </div>
+                  </CardHeader>
+                  <CardContent>
+                    <p className={`${isDarkMode ? "text-gray-300" : "text-gray-600"} mb-4`}>{item.description}</p>
+                    <ul className={`${isDarkMode ? "text-gray-300" : "text-gray-600"} flex flex-col gap-2`}>
+                      {item.responsibilities.map((responsibility) => (
+                        <li key={responsibility} className="flex items-start gap-2"><span className="text-blue-600">•</span>{responsibility}</li>
+                      ))}
+                    </ul>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
@@ -857,7 +940,7 @@ export default function Portfolio() {
       {/* Footer */}
       <footer className={`py-8 border-t transition-all duration-300 ${isDarkMode ? "bg-gray-900 border-gray-800" : "bg-white border-gray-200"}`}>
         <div className="max-w-6xl mx-auto px-6 text-center">
-          <p className={`transition-colors ${isDarkMode ? "text-gray-400" : "text-gray-600"}`}>© 2025 Christian Yohanes Simangunsong. Built with Next.js and Tailwind CSS.</p>
+          <p className={`transition-colors ${isDarkMode ? "text-gray-400" : "text-gray-600"}`}>© 2025 Christian Simangunsong. Built with Next.js and Tailwind CSS.</p>
         </div>
       </footer>
     </div>
