@@ -426,7 +426,7 @@ export default function Portfolio() {
                 >
                   <img
                     src="/profile.jpg"
-                    alt="Christian Yohanes Simangunsong"
+                    alt="Christian Simangunsong"
                     className="w-full h-full object-cover"
                     onError={(e) => {
                       e.currentTarget.src = "/placeholder.svg?height=256&width=256";
@@ -488,7 +488,7 @@ export default function Portfolio() {
             <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }}>
               <div className="space-y-6">
                 <p className={`text-lg leading-relaxed ${isDarkMode ? "text-gray-300" : "text-gray-600"}`}>
-                  Hi👋, I'm Christian, a 6th semester student of Software Engineering Technology Study Program at Del Institute of Technology. I have a strong interest in frontend and backend software development, as well as UI/UX design.
+                  Hi, I&apos;m Christian, a Software Engineering Technology student at Institut Teknologi Del. I focus on building thoughtful digital products across frontend, backend, mobile, and UI/UX design.
                 </p>
                 <p className={`text-lg leading-relaxed ${isDarkMode ? "text-gray-300" : "text-gray-600"}`}>
                   I have experience in developing websites and mobile applications, and designing user interfaces that meet project needs through various academic and organizational projects.
@@ -857,7 +857,7 @@ export default function Portfolio() {
       {/* Footer */}
       <footer className={`py-8 border-t transition-all duration-300 ${isDarkMode ? "bg-gray-900 border-gray-800" : "bg-white border-gray-200"}`}>
         <div className="max-w-6xl mx-auto px-6 text-center">
-          <p className={`transition-colors ${isDarkMode ? "text-gray-400" : "text-gray-600"}`}>© 2025 Christian Yohanes Simangunsong. Built with Next.js and Tailwind CSS.</p>
+          <p className={`transition-colors ${isDarkMode ? "text-gray-400" : "text-gray-600"}`}>© 2025 Christian Simangunsong. Built with Next.js and Tailwind CSS.</p>
         </div>
       </footer>
     </div>

@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Christian Simangunsong",
-  description: "Christian Simangunsong's Portfolio",
+  title: "Christian Simangunsong | Software Engineer",
+  description: "Portfolio of Christian Simangunsong, a Software Engineering Technology student and full-stack developer from Indonesia.",
+  keywords: ["Christian Simangunsong", "software engineer", "full-stack developer", "UI/UX designer", "Institut Teknologi Del"],
   generator: "vercel",
 };
 
