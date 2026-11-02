@@ -525,13 +525,13 @@ const projects = [
             <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }}>
               <div className="space-y-6">
                 <p className={`text-lg leading-relaxed ${isDarkMode ? "text-gray-300" : "text-gray-600"}`}>
-                  Hi, I&apos;m Christian, a Software Engineering Technology student at Institut Teknologi Del. I focus on building thoughtful digital products across frontend, backend, mobile, and UI/UX design.
+                  Hi, I&apos;m Christian Yohanes Simangunsong, a Software Engineering Technology graduate from Institut Teknologi Del with a strong interest in full-stack development and UI/UX design.
                 </p>
                 <p className={`text-lg leading-relaxed ${isDarkMode ? "text-gray-300" : "text-gray-600"}`}>
-                  I have experience in developing websites and mobile applications, and designing user interfaces that meet project needs through various academic and organizational projects.
+                  I have hands-on experience developing web and mobile applications through academic projects, organizational activities, and professional experience. My technical interests include frontend and backend development, REST API integration, database management, and creating intuitive, user-centered interfaces.
                 </p>
                 <p className={`text-lg leading-relaxed ${isDarkMode ? "text-gray-300" : "text-gray-600"}`}>
-                  In the future, I would like to continue honing my skills in full-stack development and UI/UX to prepare myself for the professional world.
+                  I enjoy exploring new technologies, solving technical challenges, and building practical digital solutions. I am continuously improving my skills and looking forward to contributing to impactful software development projects while growing as a software developer.
                 </p>
               </div>
             </motion.div>
