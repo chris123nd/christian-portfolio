@@ -194,7 +194,7 @@ export default function Portfolio() {
     {
       organization: "Student Executive Board (BEM) - Del Institut of Technology",
       position: "Treasurer of Religious and Social Department",
-      period: "Nov 2024 - Present",
+      period: "2024-2025",
       description: "Managing department budgeting and organizing spiritual and social programs.",
       responsibilities: [
         "Organizing weekly student worship and reflections",
@@ -450,7 +450,7 @@ export default function Portfolio() {
                   className="w-64 h-64 rounded-full overflow-hidden border-4 border-white/50 dark:border-gray-700/50 shadow-2xl backdrop-blur-sm"
                 >
                   <img
-                    src="/profile.jpg"
+                    src="/profile.png"
                     alt="Christian Simangunsong"
                     className="w-full h-full object-cover"
                     onError={(e) => {
