@@ -75,6 +75,11 @@ export default function Portfolio() {
       category: "Frontend",
     },
     {
+      name: "Next.js",
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
+      category: "Frontend",
+    },
+    {
       name: "PHP",
       logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg",
       category: "Backend",
@@ -126,7 +131,7 @@ export default function Portfolio() {
     },
     {
       name: "Excel",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/3/34/Microsoft_Office_Excel_%282019%E2%80%93present%29.svg",
+      logo: "https://cdn.simpleicons.org/microsoftexcel/217346",
       category: "Database",
     },
     {
@@ -245,7 +250,7 @@ const projects = [
     {
       organization: "Association of Software Engineering Technology Students (HIMAPRO) - Del Institut of Technology",
       position: "Member",
-      period: "Sep 2022 - Present",
+      period: "Sep 2022 - Sep 2026",
       description: "Active participation in Software Engineering Technology Student Association.",
       responsibilities: ["Participated in organizational activities and events", "Supported events through coordination and collaboration", "Contributed to student community development", "Engaged in professional development activities"],
       icon: <Users className="w-6 h-6" />,
