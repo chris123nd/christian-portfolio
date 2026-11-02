@@ -562,8 +562,8 @@ export default function Portfolio() {
                   <div>
                     <h4 className={`${isDarkMode ? "text-white" : "text-gray-900"} font-medium`}>Institut Teknologi Del</h4>
                     <p className="text-blue-600">Bachelor of Applied Software</p>
-                    <p className={`${isDarkMode ? "text-gray-400" : "text-gray-500"} text-sm`}>Aug 2022 - Sep 2026 (Expected)</p>
-                    <p className={`${isDarkMode ? "text-gray-400" : "text-gray-500"} text-sm`}>GPA: 3.08/4.00</p>
+                    <p className={`${isDarkMode ? "text-gray-400" : "text-gray-500"} text-sm`}>Aug 2022 - Sep 2026</p>
+                    <p className={`${isDarkMode ? "text-gray-400" : "text-gray-500"} text-sm`}>GPA: 3.18/4.00</p>
                   </div>
                 </CardContent>
               </Card>
