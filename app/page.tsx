@@ -141,9 +141,21 @@ export default function Portfolio() {
     },
   ];
 
-  const projects = [
-    {
-      title: "Mobile E-Commerce Application – Rumah Kreatif Toba",
+const projects = [
+  {
+  title: "Thesis: TAPATUPA Primary-Standby Database",
+  period: "Aug. 2025 – Aug. 2026",
+  description: "A high-availability PostgreSQL primary-standby cluster built for resilient Laravel application workloads.",
+  technologies: ["PostgreSQL", "Docker", "Laravel", "Redis", "HAProxy", "PgBouncer"],
+  features: [
+  "Built PostgreSQL primary-standby replication on Docker Compose using WAL streaming",
+  "Configured HAProxy to route writes to the primary and distribute reads across the standby",
+  "Improved throughput from 23.3 to 45.1 requests per second and restored service after failover in 17.86 seconds",
+  ],
+  githubUrl: "https://github.com/",
+  },
+  {
+  title: "Mobile E-Commerce Application – Rumah Kreatif Toba",
       period: "Jan 2025 - Jul 2025",
       description: "Developed a comprehensive mobile e-commerce application with user authentication, real-time chat, product catalog, and flexible checkout process.",
       technologies: ["Flutter", "Dart", "Laravel", "PHP", "MySQL"],
